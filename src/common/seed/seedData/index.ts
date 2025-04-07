@@ -8,7 +8,6 @@ export const seedData = async (manager: EntityManager): Promise<void> => {
     const total = 1000000;
     const batchSize = 500;
 
-    console.log('start');
     for (let i = 0; i < total; i += batchSize) {
       const products: ProductEntity[] = [];
       for (let j = 0; j < batchSize && i + j < total; j++) {
